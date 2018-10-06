@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import { PyzaLogo } from '../images';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <div style={{ display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <img style={{ height: 80 }} src={PyzaLogo}/>
+      <h1 style={{ fontWeight: 'normal', color: '#FFF', fontSize: 20 }}>Coming Soon</h1>
+    </div>
   </Layout>
 )
 

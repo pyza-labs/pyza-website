@@ -1,0 +1,1 @@
+export const PyzaLogo = require('./PyzaLogo.png');

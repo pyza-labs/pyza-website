@@ -1,0 +1,64 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  max-width: 920px;
+  width: calc(100% - 24px);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 0.5px solid #f5f5f5;
+}
+
+.navbar-button {
+  color: #333;
+  display: block;
+  text-decoration: none;
+  padding: 8px 12px; 
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: #333;
+  color: #FFF;
+}
+
+.navbar > .navbar-link {
+  float: right;
+}
+
+.navbar > .navbar-logo {
+  float: left;
+  margin-top: 10px;
+}
+
+.navbar-logo .title {
+  transition: all 0.3s ease-in;
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.navbar-link .title {
+  transition: all 0.15s ease-in;
+  display: block;
+  text-align: center;
+  padding: 24px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.navbar-link .title:hover {
+  background-color: #D0021B;
+  color: #FFF;
+}

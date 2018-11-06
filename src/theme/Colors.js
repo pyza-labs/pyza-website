@@ -1,0 +1,7 @@
+export const GrayLightest = "#FFF"
+export const GrayLighter = "#CCC"
+export const GrayLight = "#AAA"
+export const GrayDark = "#999"
+export const GrayDarker = "#888"
+export const GrayDarkest = "#333"
+export const Red = "#D0021B"

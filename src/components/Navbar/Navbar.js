@@ -1,12 +1,11 @@
 import React from 'react';
 import './Navbar.css';
 import { PyzaLogoBlack } from '../../images';
-import { Colors } from '../../theme';
 
 export const Navbar = () => {
   return (
     <ul className="navbar">
-      <li className="navbar-logo"><a><img src={PyzaLogoBlack}/></a></li>
+      <li className="navbar-logo"><a href="#home"><img alt="logo" src={PyzaLogoBlack}/></a></li>
       <li className="navbar-link">
         <a href="mailto:info@pyzalabs.com" className="navbar-button">
           EMAIL US

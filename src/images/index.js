@@ -1,3 +1,9 @@
-export const PyzaLogo = require('./PyzaLogo.png');
-export const PyzaLogoBlack = require('./PyzaLogoBlack.png');
-export const HomeImage = require('./HomeImage.png');
+import PyzaLogo from './PyzaLogo.png';
+import PyzaLogoBlack from './PyzaLogoBlack.png';
+import HomeImage from './HomeImage.png';
+
+export {
+  PyzaLogo,
+  PyzaLogoBlack,
+  HomeImage
+}

@@ -11,7 +11,7 @@ const IndexPage = () => (
     <div>
       <Navbar/>
       <div id="home" style={{ display: 'flex', flex: 1, height: '90vh', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80 }}>
-        <img alt="Image" src={HomeImage}/>
+        <img alt="" src={HomeImage}/>
         <div style={{ flex: 1, flexDirection: 'column', marginLeft: 20 }}>
           <div style={{ flex: 1, fontSize: 40, fontWeight: 700, lineHeight: 1.2 }}>
             Next level products,

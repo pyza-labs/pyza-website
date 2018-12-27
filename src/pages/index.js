@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { Navbar, Layout } from '../components'
+import { Navbar, Footer, Layout } from '../components'
 
 import './index.css';
 import { HomeImage } from '../images';
 import { Colors } from '../theme';
 
 const IndexPage = () => (
-  <Layout>
-    <div>
+  <div>
+    <Layout>
       <Navbar/>
       <div id="home" style={{ display: 'flex', flex: 1, height: '90vh', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 80 }}>
         <img alt="" src={HomeImage}/>
@@ -23,8 +23,10 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+    <Footer/>
+  </div>
+  
 )
 
 export default IndexPage

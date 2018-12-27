@@ -8,7 +8,7 @@ export const Navbar = () => {
       <li className="navbar-logo"><a href="#home"><img alt="logo" src={PyzaLogoBlack}/></a></li>
       <li className="navbar-link">
         <a href="mailto:info@pyzalabs.com" className="navbar-button">
-          EMAIL US
+          HIRE US!
         </a>
       </li>
       {/* <li className="navbar-link"><a href="#home" className="title">BLOG</a></li>

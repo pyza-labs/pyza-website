@@ -11,6 +11,12 @@ export const Footer = () => {
             <img style={{ width: 100 }} alt="logo" src={PyzaLogo}/>
           </div>
           <div style={{ marginLeft: 'auto' }}>
+            <div className="footer-list-header">OPEN SOURCE</div>
+            <ul className="footer-list">
+              <li>Github</li>
+            </ul>
+          </div>
+          <div style={{ marginLeft: 80 }}>
             <div className="footer-list-header">HIRE DEVELOPERS</div>
             <ul className="footer-list">
               <li>Node Developers</li>

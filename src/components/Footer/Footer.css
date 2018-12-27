@@ -10,7 +10,7 @@
 }
 
 .footer-container {
-  max-width: 960px;
+  max-width: 1280px;
   flex-direction: column;
   flex: 1;
   display: flex;
@@ -37,6 +37,12 @@
 .footer-list li {
   font-weight: 400;
   font-size: 13px;
+  color: #AAA;
+  cursor: pointer;
+}
+
+.footer-list li:hover {
+  color: #FFF;
 }
 
 .copyright-info {

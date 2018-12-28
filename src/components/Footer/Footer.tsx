@@ -1,10 +1,42 @@
 import React from 'react';
+import { PyzaLogo } from '../../assets';
 import './Footer.css';
-import { PyzaLogo } from '../../images';
 
-export const Footer = () => {
-  return (
-    <div className="footer">
+enum Developers {
+  NodeDevelopers = 'Node Developers',
+  ReactDevelopers = 'React Developers',
+  ReactNativeDevelopers = 'React Native Developers',
+  iOSDevelopers = 'iOS Developers',
+  AndroidDevelopers = 'Android Developers',
+  FullStackDevelopers = 'Full Stack Developers',
+}
+
+enum Transcribers {
+  TranslationAndTranscription = 'Translation & Transcription',
+  Subtitling = 'Subtitling',
+  ContentWriting = 'Content Writing',
+  CreativeWriting = 'Creative Writing',
+  Ghostwriting = 'Ghostwriting',
+  FictionWriting = 'Fiction Writing',
+  DataEntry = 'Data Entry',
+  LanguageExperts = 'Language Experts - Hindi English',
+}
+
+enum OtherLinks {
+  Github = 'Github',
+  Instagram = 'Instagram',
+  Facebook = 'Facebook',
+  Medium = 'Medium',
+}
+
+interface FooterProps {
+  onClickHire: (option: Developers | Transcribers) => void;
+}
+
+export class Footer extends React.Component {
+  render() {
+    return (
+      <div className="footer">
       <div className="footer-container">
         <div style={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
           <div>
@@ -58,5 +90,6 @@ export const Footer = () => {
         <div className="copyright-info">2018 © All rights reserved. Pyza Labs India Private Limited.</div>
       </div>
     </div>
-  );
-};
+    );
+  }
+}

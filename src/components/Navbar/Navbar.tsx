@@ -13,7 +13,7 @@ export class Navbar extends React.Component {
         <li className="navbar-link"><a href="#tech" className="title">TECHNOLOGY</a></li> */}
         <li style={{ marginLeft: 'auto' }} className="navbar-link">
           <a href="mailto:info@pyzalabs.com" className="navbar-button">
-            HIRE US!
+            CONTACT US
           </a>
         </li>
         

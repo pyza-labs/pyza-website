@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   background-color: white;
-  max-width: 920px;
+  max-width: 960px;
   width: calc(100% - 24px);
   list-style-type: none;
   margin: 0;

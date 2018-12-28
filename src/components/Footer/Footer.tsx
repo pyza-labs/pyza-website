@@ -2,7 +2,7 @@ import React from 'react';
 import { PyzaLogo } from '../../assets';
 import './Footer.css';
 
-enum Developers {
+export enum Developers {
   NodeDevelopers = 'Node Developers',
   ReactDevelopers = 'React Developers',
   ReactNativeDevelopers = 'React Native Developers',
@@ -11,7 +11,7 @@ enum Developers {
   FullStackDevelopers = 'Full Stack Developers',
 }
 
-enum Transcribers {
+export enum Transcribers {
   TranslationAndTranscription = 'Translation & Transcription',
   Subtitling = 'Subtitling',
   ContentWriting = 'Content Writing',
@@ -22,18 +22,57 @@ enum Transcribers {
   LanguageExperts = 'Language Experts - Hindi English',
 }
 
-enum OtherLinks {
+export enum OtherLinks {
   Github = 'Github',
   Instagram = 'Instagram',
   Facebook = 'Facebook',
   Medium = 'Medium',
 }
 
+export type Link = Developers | Transcribers | OtherLinks;
+
 interface FooterProps {
-  onClickHire: (option: Developers | Transcribers) => void;
+  onClickHire: (option: Link) => void;
 }
 
-export class Footer extends React.Component {
+export class Footer extends React.Component<FooterProps> {
+
+  trancribers: Transcribers[] = [
+    Transcribers.TranslationAndTranscription,
+    Transcribers.Subtitling,
+    Transcribers.ContentWriting,
+    Transcribers.CreativeWriting,
+    Transcribers.Ghostwriting,
+    Transcribers.FictionWriting,
+    Transcribers.DataEntry,
+    Transcribers.LanguageExperts,
+  ];
+
+  developers: Developers[] = [
+    Developers.NodeDevelopers,
+    Developers.ReactDevelopers,
+    Developers.ReactNativeDevelopers,
+    Developers.iOSDevelopers,
+    Developers.AndroidDevelopers,
+    Developers.FullStackDevelopers,
+  ];
+
+  socialLinks: OtherLinks[] = [
+    OtherLinks.Instagram,
+    OtherLinks.Facebook,
+    OtherLinks.Medium,
+  ]
+
+  getLink = (link: OtherLinks) => {
+    switch (link) {
+      case OtherLinks.Facebook: return 'https://www.facebook.com/pyzalabs'
+      case OtherLinks.Github: return 'https://github.com/pyza-labs'
+      case OtherLinks.Medium: return 'https://medium.com/@pyzalabs'
+      case OtherLinks.Instagram: return 'https://www.instagram.com/pyzalabs'
+      default: return '#';
+    }
+  }
+
   render() {
     return (
       <div className="footer">
@@ -45,41 +84,37 @@ export class Footer extends React.Component {
           <div style={{ marginLeft: 'auto' }}>
             <div className="footer-list-header">OPEN SOURCE</div>
             <ul className="footer-list">
-              <li>Github</li>
+              <li>
+                <a target='_blank' href={this.getLink(OtherLinks.Github)}>{OtherLinks.Github}</a>
+              </li>
             </ul>
           </div>
           <div style={{ marginLeft: 80 }}>
             <div className="footer-list-header">HIRE DEVELOPERS</div>
             <ul className="footer-list">
-              <li>Node Developers</li>
-              <li>React Developers</li>
-              <li>React Native Developers</li>
-              <li>iOS Developers</li>
-              <li>Android Developers</li>
-              <li>Full Stack Developers</li>
+              { this.developers.map(developer => <li key={developer} onClick={() =>this.props.onClickHire(developer)}>{developer}</li>) }
             </ul>
           </div>
           <div style={{ marginLeft: 80 }}>
             <div className="footer-list-header">HIRE TRANSLATORS</div>
             <div className="footer-list-header">& TRANSCRIBERS</div>
             <ul className="footer-list">
-              <li>Translation & Transcription</li>
-              <li>Subtitling</li>
-              <li>Content Writing</li>
-              <li>Creative Writing</li>
-              <li>Ghostwriting</li>
-              <li>Fiction Writing</li>
-              <li>Data Entry</li>
-              <li>Language Experts - Hindi English</li>
+              { this.trancribers.map(transcriber => <li key={transcriber} onClick={() =>this.props.onClickHire(transcriber)}>{transcriber}</li>) }
             </ul>
           </div>
           <div style={{ marginLeft: 80 }}>
             <div className="footer-list-header">CONNECT</div>
             <div style={{ marginTop: 16 }} className="footer-list-header">Social</div>
             <ul className="footer-list">
-              <li>Instagram</li>
-              <li>Facebook</li>
-              <li>Medium</li>
+              { 
+                this.socialLinks.map((social) => {
+                  return (
+                      <li key={social}>
+                        <a target='_blank' href={this.getLink(social)}>{social}</a>
+                      </li>
+                    );
+                })
+              }
             </ul>
             <div className="footer-list-subheader">Our Office</div>
             <div>Indira Nagar, Bengaluru, India</div>

@@ -31,12 +31,14 @@ export const Footer = () => {
             <div className="footer-list-header">HIRE TRANSLATORS</div>
             <div className="footer-list-header">& TRANSCRIBERS</div>
             <ul className="footer-list">
-              <li>Node Developers</li>
-              <li>React Developers</li>
-              <li>React Native Developers</li>
-              <li>iOS Developers</li>
-              <li>Android Developers</li>
-              <li>Full Stack Developers</li>
+              <li>Translation & Transcription</li>
+              <li>Subtitling</li>
+              <li>Content Writing</li>
+              <li>Creative Writing</li>
+              <li>Ghostwriting</li>
+              <li>Fiction Writing</li>
+              <li>Data Entry</li>
+              <li>Language Experts - Hindi English</li>
             </ul>
           </div>
           <div style={{ marginLeft: 80 }}>

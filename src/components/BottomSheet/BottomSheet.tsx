@@ -10,6 +10,7 @@ interface BottomSheetProps {
 export class BottomSheet extends React.Component<BottomSheetProps> {
   render() {
     const top = this.props.show ? 62 : '100vh';
+    const display = this.props.show ? 'flex': 'none'
     return (
       <div style={{ 
         zIndex: 99, 
@@ -18,7 +19,7 @@ export class BottomSheet extends React.Component<BottomSheetProps> {
         backgroundColor: '#121212', 
         width: '100%', 
         flex: 1, 
-        display: 'flex',
+        display: display,
         position: 'fixed',
         flexDirection: 'column',
         borderTop: '1px solid',

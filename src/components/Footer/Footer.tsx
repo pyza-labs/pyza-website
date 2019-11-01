@@ -77,11 +77,11 @@ export class Footer extends React.Component<FooterProps> {
     return (
       <div className="footer">
       <div className="footer-container">
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
-          <div>
-            <img style={{ width: 100 }} alt="logo" src={PyzaLogo}/>
+        <div className="footer-container-center">
+          <div className="footer-img-container">
+            <img className="footer-img" alt="logo" src={PyzaLogo}/>
           </div>
-          <div style={{ marginLeft: 'auto' }}>
+          <div className="footer-header1">
             <div className="footer-list-header">OPEN SOURCE</div>
             <ul className="footer-list">
               <li>
@@ -89,20 +89,20 @@ export class Footer extends React.Component<FooterProps> {
               </li>
             </ul>
           </div>
-          <div style={{ marginLeft: 80 }}>
+          <div className="footer-header2">
             <div className="footer-list-header">HIRE DEVELOPERS</div>
             <ul className="footer-list">
               { this.developers.map(developer => <li key={developer} onClick={() =>this.props.onClickHire(developer)}>{developer}</li>) }
             </ul>
           </div>
-          <div style={{ marginLeft: 80 }}>
+          <div className="footer-header3">
             <div className="footer-list-header">HIRE TRANSLATORS</div>
             <div className="footer-list-header">& TRANSCRIBERS</div>
             <ul className="footer-list">
               { this.trancribers.map(transcriber => <li key={transcriber} onClick={() =>this.props.onClickHire(transcriber)}>{transcriber}</li>) }
             </ul>
           </div>
-          <div style={{ marginLeft: 80 }}>
+          <div className="footer-header4">
             <div className="footer-list-header">CONNECT</div>
             <div style={{ marginTop: 16 }} className="footer-list-header">Social</div>
             <ul className="footer-list">
@@ -117,7 +117,7 @@ export class Footer extends React.Component<FooterProps> {
               }
             </ul>
             <div className="footer-list-subheader">Our Office</div>
-            <div>Indira Nagar, Bengaluru, India</div>
+            <div>HSR Layout, Bengaluru, India</div>
             <div className="footer-list-subheader">Hire Us!</div>
             <a style={{ color: '#FFF' }} href="mailto:info@pyzalabs.com">info@pyzalabs.com</a>
           </div>
